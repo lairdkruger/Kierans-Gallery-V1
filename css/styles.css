@@ -1,0 +1,269 @@
+@font-face {
+    font-family: 'Tomato-Soup';
+    src: url('/fonts/Tomato-Soup/TomatoSoup-Regular.eot');
+    src: url('/fonts/Tomato-Soup/TomatoSoup-Regular.woff') format('woff'),
+        url('/fonts/Tomato-Soup/TomatoSoup-Regular.otf') format('opentype'),
+        url('/fonts/Tomato-Soup/TomatoSoup-Regular.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Inter-Thin';
+    src: url('/fonts/Inter/Inter-Thin-BETA.eot');
+    src: url('/fonts/Inter/Inter-Thin-BETA.woff') format('woff'),
+        url('/fonts/Inter/Inter-Thin-BETA.otf') format('opentype'),
+        url('/fonts/Inter/Inter-Thin-BETA.svg') format('svg');
+}
+
+body {
+    margin: 0;
+}
+
+#grid-canvas {
+    z-index: 10;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#slideshow-canvas {
+    z-index: 10;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-box {
+    z-index: 20;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-box {
+    position: absolute;
+    bottom: 3vw;
+    right: 3vw;
+    text-align: right;
+}
+
+.title-text {
+    margin: 0 15px;
+    font-family: 'Tomato-Soup';
+    font-weight: 100;
+    font-size: 7vw;
+    line-height: 5vw;
+}
+
+.title-text-small {
+    margin: 0 15px;
+    font-family: 'Tomato-Soup';
+    font-weight: 100;
+    font-size: 5vw;
+    line-height: 5vw;
+}
+
+.link-text {
+    font-family: 'Inter-Thin';
+    margin: 5px 15px;
+}
+
+/* GRID BOX */
+/* GRID BOX */
+/* GRID BOX */
+
+.grid-aligner {
+    position: absolute;
+    left: 0;
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-box {
+    width: 100%;
+    height: auto;
+    padding: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.grid-curtain img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.grid-curtain {
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.grid-curtain img {
+    /* hide the original image */
+    opacity: 0;
+}
+
+/*** in case of error show the image ***/
+.no-curtains .grid-curtain {
+}
+
+.no-curtains .grid-curtain img {
+    opacity: 1;
+}
+
+/* SLIDESHOW BOX */
+/* SLIDESHOW BOX */
+/* SLIDESHOW BOX */
+
+.slideshow-box {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow-curtain {
+    position: fixed;
+}
+
+@media screen and (min-width: 600px) {
+    .portrait {
+        height: 75vh;
+    }
+
+    .landscape {
+        width: 50vw;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+    .portrait {
+        height: 75vh;
+    }
+
+    .landscape {
+        width: 80vw;
+    }
+}
+
+.landscape img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    /* hide the original image */
+    opacity: 0;
+}
+
+.portrait img {
+    position: relative;
+    display: block;
+    width: auto;
+    height: 100%;
+
+    /* hide the original image */
+    opacity: 0;
+}
+
+.white {
+    width: 100%;
+    height: 100%;
+
+    /* hide the original image */
+    opacity: 0;
+}
+
+.white img {
+    width: 100%;
+    height: 100%;
+}
+
+/*** in case of error show the image ***/
+.no-curtains .slideshow-curtain {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-curtains .slideshow-curtain img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#navigation {
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigation-previous {
+    cursor: w-resize;
+    width: 35%;
+    height: 100vh;
+}
+
+#navigation-back {
+    cursor: n-resize;
+    width: 30%;
+    height: 100vh;
+}
+
+#navigation-next {
+    cursor: e-resize;
+    width: 35%;
+    height: 100vh;
+}
