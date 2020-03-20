@@ -5,6 +5,11 @@ var CURTAINS_SLIDESHOW = null
 var CURTAINS_GRID = null
 var FADE_OUT_DURATION = 1000
 
+window.addEventListener('resize', function() {
+    // force a reload to fix curtain.js visibility bug
+    window.location = '/'
+})
+
 window.addEventListener('load', function() {
     CURTAINS_SLIDESHOW = new CurtainsGallery(
         morphShader.uniforms,
@@ -26,6 +31,12 @@ window.addEventListener('load', function() {
 })
 
 function handleClicks() {
+    // ig
+    var ig = document.getElementById('ig-logo')
+    ig.addEventListener('click', function() {
+        window.location = 'https://www.instagram.com/kierankruger/?hl=en'
+    })
+
     // home
     var back = document.getElementsByClassName('title-box')[0]
     back.addEventListener('click', function() {
@@ -45,6 +56,8 @@ function handleClicks() {
             CURTAINS_SLIDESHOW.refreshIndex()
 
             document.getElementById('grid-canvas').style.display = 'none'
+            document.getElementById('hero-box').style.display = 'none'
+
             document.getElementById('slideshow-canvas').style.display = 'block'
             document.getElementById('navigation').style.pointerEvents = 'all'
         })
@@ -55,6 +68,7 @@ function handleClicks() {
     back.addEventListener('click', function() {
         document.getElementById('slideshow-canvas').style.display = 'none'
         document.getElementById('grid-canvas').style.display = 'block'
+        document.getElementById('hero-box').style.display = 'flex'
         document.getElementById('navigation').style.pointerEvents = 'none'
     })
 }
