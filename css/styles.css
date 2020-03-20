@@ -300,21 +300,21 @@ body {
 }
 
 #navigation-previous {
-    cursor: url('images/cursor-previous.png'), auto;
+    cursor: url('../images/cursor-previous.png'), auto;
     /* cursor: w-resize; */
     width: 35%;
     height: 100vh;
 }
 
 #navigation-back {
-    cursor: url('images/cursor-close.png'), auto;
+    cursor: url('../images/cursor-close.png'), auto;
     /* cursor: n-resize; */
     width: 30%;
     height: 100vh;
 }
 
 #navigation-next {
-    cursor: url('images/cursor-next.png'), auto;
+    cursor: url('../images/cursor-next.png'), auto;
     /* cursor: e-resize; */
     width: 35%;
     height: 100vh;
