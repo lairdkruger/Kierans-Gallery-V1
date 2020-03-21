@@ -11,6 +11,12 @@ window.addEventListener('resize', function() {
 })
 
 window.addEventListener('load', function() {
+    // CURTAINS_GRID = new CurtainsGridScroller(
+    //     scrollShader.uniforms,
+    //     scrollShader.vertexShader,
+    //     scrollShader.fragmentShader
+    // )
+
     CURTAINS_SLIDESHOW = new CurtainsGallery(
         morphShader.uniforms,
         morphShader.vertexShader,
@@ -19,13 +25,7 @@ window.addEventListener('load', function() {
 
     document.getElementById('slideshow-canvas').style.display = 'none'
 
-    CURTAINS_GRID = new CurtainsGridScroller(
-        scrollShader.uniforms,
-        scrollShader.vertexShader,
-        scrollShader.fragmentShader
-    )
-
-    // document.body.classList.add('no-curtains')
+    document.body.classList.add('no-curtains')
 
     handleClicks()
 })
@@ -57,6 +57,7 @@ function handleClicks() {
 
             document.getElementById('grid-canvas').style.display = 'none'
             document.getElementById('hero-box').style.display = 'none'
+            document.getElementsByClassName('grid-aligner')[0].style.opacity = 0
 
             document.getElementById('slideshow-canvas').style.display = 'block'
             document.getElementById('navigation').style.pointerEvents = 'all'
@@ -67,6 +68,7 @@ function handleClicks() {
     var back = document.getElementById('navigation-back')
     back.addEventListener('click', function() {
         document.getElementById('slideshow-canvas').style.display = 'none'
+        document.getElementsByClassName('grid-aligner')[0].style.opacity = 1
         document.getElementById('grid-canvas').style.display = 'block'
         document.getElementById('hero-box').style.display = 'flex'
         document.getElementById('navigation').style.pointerEvents = 'none'
