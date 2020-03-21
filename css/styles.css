@@ -1,30 +1,30 @@
 @font-face {
     font-family: 'Tomato-Soup';
-    src: url('/fonts/Tomato-Soup/TomatoSoup-Regular.eot');
-    src: url('/fonts/Tomato-Soup/TomatoSoup-Regular.woff') format('woff'),
-        url('/fonts/Tomato-Soup/TomatoSoup-Regular.otf') format('opentype'),
-        url('/fonts/Tomato-Soup/TomatoSoup-Regular.svg') format('svg');
+    src: url('../fonts/Tomato-Soup/TomatoSoup-Regular.eot');
+    src: url('../fonts/Tomato-Soup/TomatoSoup-Regular.woff') format('woff'),
+        url('../fonts/Tomato-Soup/TomatoSoup-Regular.otf') format('opentype'),
+        url('../fonts/Tomato-Soup/TomatoSoup-Regular.svg') format('svg');
 }
 
 @font-face {
     font-family: 'Inter-Thin';
-    src: url('/fonts/Inter/Inter-Thin-BETA.eot');
-    src: url('/fonts/Inter/Inter-Thin-BETA.woff') format('woff'),
-        url('/fonts/Inter/Inter-Thin-BETA.otf') format('opentype'),
-        url('/fonts/Inter/Inter-Thin-BETA.svg') format('svg');
+    src: url('../fonts/Inter/Inter-Thin-BETA.eot');
+    src: url('../fonts/Inter/Inter-Thin-BETA.woff') format('woff'),
+        url('../fonts/Inter/Inter-Thin-BETA.otf') format('opentype'),
+        url('../fonts/Inter/Inter-Thin-BETA.svg') format('svg');
 }
 
 @font-face {
     font-family: 'Novar';
-    src: url('/fonts/Novar/Novar.eot');
-    src: url('/fonts/Novar/Novar.woff') format('woff'),
-        url('/fonts/Novar/Novar.svg') format('svg');
+    src: url('../fonts/Novar/Novar.eot');
+    src: url('../fonts/Novar/Novar.woff') format('woff'),
+        url('../fonts/Novar/Novar.svg') format('svg');
 }
 
 @font-face {
     font-family: 'Argesta';
-    src: url('/fonts/Argesta/argestadisplay-regular-webfont.eot');
-    src: url('/fonts/Argesta/argestadisplay-regular-webfont.woff') format('woff');
+    src: url('../fonts/Argesta/argestadisplay-regular-webfont.eot');
+    src: url('../fonts/Argesta/argestadisplay-regular-webfont.woff') format('woff');
 }
 
 body {
