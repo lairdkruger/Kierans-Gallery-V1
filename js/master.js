@@ -7,7 +7,7 @@ var FADE_OUT_DURATION = 1000
 
 window.addEventListener('resize', function() {
     // force a reload to fix curtain.js visibility bug
-    window.location = '/'
+    window.location = '/Kierans-Gallery-V1'
 })
 
 window.addEventListener('load', function() {
@@ -40,7 +40,7 @@ function handleClicks() {
     // home
     var back = document.getElementsByClassName('title-box')[0]
     back.addEventListener('click', function() {
-        window.location = '/'
+        window.location = '/Kierans-Gallery-V1'
     })
 
     // grid image clicks
