@@ -169,7 +169,7 @@ body {
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .row {
         flex-wrap: wrap;
     }
@@ -177,6 +177,71 @@ body {
     .column {
         flex: 100%;
         max-width: 100%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero-box {
+        position: relative;
+        height: 75vh;
+    }
+
+    #ig-logo {
+        cursor: pointer;
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 25px;
+        height: 25px;
+        opacity: 0.5;
+    }
+
+    #ig-logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-aligner {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 10vw;
+        width: 80vw;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 4px;
+    }
+
+    .title-text-small {
+        font-size: 3vw;
+        line-height: 3vw;
+    }
+
+    .title-text {
+        font-size: 6vw;
+        line-height: 6vw;
+    }
+
+    .prints-text {
+        font-size: 3vw;
+        line-height: 3vw;
     }
 }
 
@@ -217,7 +282,7 @@ body {
     position: fixed;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
     .portrait {
         height: 75vh;
     }
@@ -228,7 +293,7 @@ body {
 }
 
 /* mobile */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .portrait {
         height: 75vh;
     }
