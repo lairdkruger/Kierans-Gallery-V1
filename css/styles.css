@@ -132,8 +132,10 @@ body {
 
 .grid-aligner {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 0;
+    right: 0;
+    margin-right: 25px;
+    margin-top: 25px;
     margin-bottom: 25px;
     width: 50vw;
     display: flex;
@@ -162,8 +164,8 @@ body {
 
 /* Use this to size margins on images */
 .grid-curtain {
-    margin-top: 16px;
-    margin-left: 16px;
+    padding-bottom: 8px;
+    padding-left: 8px;
     cursor: pointer;
 }
 
