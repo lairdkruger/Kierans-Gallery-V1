@@ -7,7 +7,7 @@ var FADE_OUT_DURATION = 1000
 
 window.addEventListener('resize', function() {
     // force a reload to fix curtain.js visibility bug
-    window.location.reload()
+    //window.location.reload()
 })
 
 window.addEventListener('load', function() {
